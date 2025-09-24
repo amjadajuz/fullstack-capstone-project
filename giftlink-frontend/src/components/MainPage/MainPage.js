@@ -8,7 +8,7 @@ function MainPage() {
 
    const fetchGifts = async () => {
             try {
-                let url = `${urlConfig.backendUrl}/api/gifts`
+                let url = `${urlConfig.backendUrl}/gifts`
                 const response = await fetch(url);
                 if (!response.ok) {
                     //something went wrong
@@ -18,7 +18,6 @@ function MainPage() {
                 setGifts(data);
             } catch (error) {
                 console.log('Fetch error: ' + error.message);
-                alert(error.message)
             }
     };
 
