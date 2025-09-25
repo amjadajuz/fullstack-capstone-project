@@ -5,9 +5,6 @@ const router = express.Router();
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const User = require("../models/User");
-const Gift = require("../models/Gift");
-const Order = require("../models/Order");
 const connectToDatabase = require("../models/db");
 //Step 1 - Task 3: Create a Pino logger instance
 const pino = require("pino");
