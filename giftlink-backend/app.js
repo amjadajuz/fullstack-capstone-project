@@ -5,7 +5,7 @@ const cors = require("cors");
 const pinoLogger = require("./logger");
 const giftRoutes = require("./routes/giftRoutes");
 const searchRoutes = require("./routes/searchRoutes");
-const authRoutes=require('./routes/authRoutes'); req
+const authRoutes = require("./routes/authRoutes");
 
 const connectToDatabase = require("./models/db");
 
