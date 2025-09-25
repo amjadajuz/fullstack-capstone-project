@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcrypt");
 const connectToDatabase = require("../models/db");
 //Step 1 - Task 3: Create a Pino logger instance
 const pino = require("pino");
@@ -53,6 +53,7 @@ router.post("/register", async (req, res) => {
     logger.info("User registered successfully");
     res.json({ authtoken, email });
   } catch (e) {
+    console.log(e)
     return res.status(500).send("Internal server error");
   }
 });
@@ -65,7 +66,7 @@ router.post("/login", async (req, res) => {
     if (!user) {
       return res.status(400).send("User not found");
     }
-    const isMatch = await bcrypt.compare(req.body.password, user.password);
+    const isMatch = await bcryptjs.compare(req.body.password, user.password);
     if (!isMatch) {
       return res.status(401).send("Wrong password");
     }
