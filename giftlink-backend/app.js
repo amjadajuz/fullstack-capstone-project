@@ -7,7 +7,6 @@ const giftRoutes = require("./routes/giftRoutes");
 const searchRoutes = require("./routes/searchRoutes");
 
 const connectToDatabase = require("./models/db");
-const { loadData } = require("./util/import-mongo/index");
 
 const app = express();
 app.use("*", cors());
