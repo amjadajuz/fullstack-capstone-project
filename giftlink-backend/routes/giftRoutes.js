@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const connectToDatabase = require("../models/db");
 
-
 router.get("/", async (req, res) => {
   try {
     // Task 1: Connect to MongoDB and store connection to db constant
@@ -57,3 +56,4 @@ router.post("/", async (req, res, next) => {
 });
 
 module.exports = router;
+/*jshint esversion: 8 */
