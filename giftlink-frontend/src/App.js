@@ -7,6 +7,7 @@ import MainPage from "./components/MainPage/MainPage";
 import Navbar from "./components/Navbar/Navbar";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
 import SearchPage from "./components/SearchPage/SearchPage";
+import DetailsPage from "./components/DetailsPage/DetailsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/app/login" element={<LoginPage />} />
         <Route path="/app/register" element={<RegisterPage />} />
         <Route path="/app/search" element={<SearchPage />} />
+         <Route path="/app/product/:productId" element={<DetailsPage />} />
       </Routes>
     </>
   );

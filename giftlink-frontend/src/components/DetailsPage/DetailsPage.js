@@ -27,6 +27,7 @@ function DetailsPage() {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
+                console.log(data)
                 setGift(data);
             } catch (error) {
                 setError(error.message);
@@ -36,7 +37,7 @@ function DetailsPage() {
         };
 
         fetchGift();
-
+console.log("fetching")
         // Task 3: Scroll to top on component mount
         window.scrollTo(0, 0);
 
